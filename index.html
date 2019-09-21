@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="js/index.js"></script>
 
     <nav>
@@ -29,33 +30,40 @@
                     <div class="stepper">
                         <div class="step">
                             <p class="step-number">1</p>
-                            <p class="step-title">Step Number One</p>
+                            <p class="step-title">Download</p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit minus obcaecati rerum ex qui, atque?</p>
 
                         </div>
                         <div class="step">
                             <p class="step-number">2</p>
-                            <p class="step-title">Step Number Two</p>
+                            <p class="step-title">Move</p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit minus obcaecati rerum ex qui, atque?</p>
 
                         </div>
                         <div class="step">
                             <p class="step-number">3</p>
-                            <p class="step-title">Step Number Three</p>
+                            <p class="step-title">Collect Data</p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit minus obcaecati rerum ex qui, atque?</p>
                         </div>
                     </div>
                 </div>
-
                 <div class="col col-lg-6">
                     <div class="form-control">
                         <label>Acceleromerator Data</label>
-                        <textarea name="acceleromerator" placeholder="Paste your JSON file here." rows="12" oninput="handleUserInput()"></textarea>
+                        <textarea id="jsonInput" name="acceleromerator" placeholder="Paste your JSON file here." rows="12" oninput="handleUserInput()"></textarea>
+                        <p id="validFeedback" class="validation-error"></p>
                     </div>
                     <div class="progress-bar">
-                        <span id="progress" class="progress-bar-green" style="width: 0%; transition: width 2s;"></span>
+                        <span id="progress" class="progress-bar-red" style="width: 0%; transition: width 2s;"></span>
+                    </div>
+                    <div class="form-control">
+                        <label>Sampling Rate</label>
+                        <input type="text" id="samplingRate" placeholder="integer e.g. 20" value="20" oninput="handleSampleRateInput()"></input>
+                        <p id="validNumFeedback" class="validation-error"></p>
                     </div>
                 </div>
+
+                <div id="plots" class="col" style="height: 600px; "></div>
             </div>
         </div>
     </section>

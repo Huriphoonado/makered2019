@@ -7,6 +7,10 @@ let xAxis = [];
 let xAccel = [];
 let yAccel = [];
 let zAccel = [];
+let samplingRate = 20;
+
+// ---------------- On Load ----------------
+document.addEventListener('DOMContentLoaded', updatePlot, false);
 
 // ---------------- Functions ----------------
 function handleUserInput() {
@@ -23,9 +27,34 @@ function handleUserInput() {
     let parsedSuccess = sortAccelerationData(parsedInput);
 
     if (!parsedSuccess) feedbackAfterInput(2);
-    else  feedbackAfterInput(3);
+    else  {
+        updatePlot();
+        feedbackAfterInput(3);
+    }
 
     return parsedSuccess;
+}
+
+function handleSampleRateInput() {
+    let validNumFeedback = document.getElementById("validNumFeedback");
+    let userInput = event.target.value;
+    let parsedInput = parseInt(userInput);
+
+    console.log(parsedInput);
+    if (isNaN(parsedInput)) {
+        event.target.classList.add("invalid");
+        validNumFeedback.innerHTML = "Please input a valid integer";
+        return false;
+    }
+    else {
+        event.target.classList.remove("invalid");
+        validNumFeedback.innerHTML = "";
+        samplingRate = parsedInput;
+        updatePlot();
+        return true;
+    }
+
+
 }
 
 function sortAccelerationData(parsedInput) {
@@ -62,21 +91,49 @@ function sortAccelerationData(parsedInput) {
     return true;
 }
 
+function updatePlot() {
+    let layout = {title:"Acceleromerator Data"};
+    let plotLoc = "plots";
+
+    let xAxisInTime = xAxis.map(x => x / samplingRate);
+
+    let xTrace = {x: xAxisInTime, y: xAccel, name: "X", mode: "lines"};
+    let yTrace = {x: xAxisInTime, y: yAccel, name: "Y", mode: "lines"};
+    let zTrace = {x: xAxisInTime, y: zAccel, name: "Z", mode: "lines"};
+    let data = [xTrace, yTrace, zTrace];
+
+    Plotly.newPlot(plotLoc, data, layout);
+}
+
 function feedbackAfterInput(caseNum) {
     let pBar = document.getElementById("progress");
+    let validFeedback = document.getElementById("validFeedback");
+    let jsonInput = document.getElementById("jsonInput");
 
     switch (caseNum) {
         case 0:
             pBar.style.width = "0%";
+            pBar.className = "progress-bar-red";
+            jsonInput.classList.add("invalid");
+            validFeedback.innerHTML = "Please paste your JSON data."
             break;
         case 1:
-            pBar.style.width = "50%";
+            pBar.style.width = "25%";
+            pBar.className = "progress-bar-red";
+            jsonInput.classList.add("invalid");
+            validFeedback.innerHTML = "Text inputted is not proper JSON."
             break;
         case 2:
             pBar.style.width = "75%";
+            pBar.className = "progress-bar-red";
+            jsonInput.classList.add("invalid");
+            validFeedback.innerHTML = "JSON contains incorrect fields."
             break;
         case 3:
             pBar.style.width = "100%";
+            pBar.className = "progress-bar-green";
+            validFeedback.innerHTML = "";
+            jsonInput.classList.remove("invalid");
             break;
     }
 }
