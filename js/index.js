@@ -4,9 +4,11 @@
 
 // ---------------- Variables ----------------
 let xAxis = [];
+
 let xAccel = [];
 let yAccel = [];
 let zAccel = [];
+
 let samplingRate = 20;
 
 // ---------------- On Load ----------------
@@ -102,7 +104,7 @@ function updatePlot() {
     let zTrace = {x: xAxisInTime, y: zAccel, name: "Z", mode: "lines"};
     let data = [xTrace, yTrace, zTrace];
 
-    Plotly.newPlot(plotLoc, data, layout);
+    Plotly.newPlot(plotLoc, data, layout, {responsive: true});
 }
 
 function feedbackAfterInput(caseNum) {
