@@ -10,7 +10,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
 
     <link rel="stylesheet" href="css/mustard-ui.min.css">
-
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 <body>
@@ -20,11 +24,50 @@
     <nav>
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="/">amped x makerED</a>
+                <a href="/makerED2019">amped x makerED</a>
             </div>
+            <ul class="nav-links">
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#accelerometer">Accelerometor</a></li>
+                <li><a href="#accelerometer">Forro</a></li>
+                <li><a href="#accelerometer">Kinect</a></li>
+            </ul>
+            <a class="mobile-menu-toggle" id="mob-toggle"></a>
+            <ul class="menu mobile-menu" id="mob-menu" style="display: none; position: absolute; top: 15px; right: 30px; z-index: 10;">
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#accelerometer">Accelerometor</a></li>
+                <li><a href="#accelerometer">Forro</a></li>
+                <li><a href="#accelerometer">Kinect</a></li>
+            </ul>
         </div>
     </nav>
-    <section class="section-secondary">
+    <section class="section-primary" id="introduction">
+        <div class="container small">
+            <div class="row">
+                <div class="col">
+                    <h1>Introduction to Motion Capture Technologies</h1>
+
+                    <h3>What is Motion Capture?</h3>
+                    <p>Motion capture is the process of capturing the movement of people or objects. It is used for film animation, sports analysis, military science, medicine, and robotics. Motion capture operates by capturing the coordinate position of points in the body or object moving, either through sensors placed on the body or using computer vision to identify the points in the body after a video is filmed. There are a wide variety of motion capture technologies in the market today, ranging significantly in both the rate and fidelity of capture and pose.</p>
+                    <p>The educational opportunities associated with motion capture technology are vast and diverse. For example, motion capture is closely related to the quantified self movement, empowering students with the opportunity to collect and analyze data about their own movement. More broadly, motion capture presents a valuable opportunity to engage students in learning about data science and computer science through project-based experiences that can be interest-driven, embodied and collaborative. In exploring the relationship between physical motion, and visualization of that motion, students have the opportunity to “open the black box” and witness the structuring and reduction of data and the process of analogical mapping between real objects and symbols.</p>
+                    <p>Motion capture can be easily integrated into geometry and physics classes, computer science and design workshops and making activities that invite students to build their own tools, algorithms or visualizations. They can also be combined with extracurricular programs, such as dance and physical education.</p>
+
+                    <h3>What motion capture technologies are available?</h3>
+                    <p>Mobile Phone Accelerometer (Free): Simple applications have been designed to easily access data from a mobile phone’s accelerometer. They produce files with the X,Y,Z values of the acceleration of the phone at set intervals.</p>
+                    <p>OpenPose Software (Free):an open-source human pose estimation software that uses computer vision to identify the X,Y positions of specific points in the body at set intervals from any video upload (even one filmed with an iPhone!)</p>
+                    <p>Wekinator (Free): A free open-source app for the creation of systems for gesture analysis and feedback. The Wekinator uses machine learning in which the user demonstrates example gestures through their webcam updating and improving their model in real time and requires no coding. Example applications include movement based instruments and gesture based game controllers.</p>
+                    <p>Kinect Sensor: Microsoft Kinect sensor/camera that captures X,Y,Z (it is able to capture depth) positions of points in the body and automatically displays visualizations of them on the screen.</p>
+
+                    <h3>For Students - Motion Capture Starter Questions:</h3>
+                    <p>In day-to-day life, list all examples of motion capture technology that you can think of. How well do these technologies tend to work? Are these technologies always useful? Do they ever make you feel uncomfortable?</p>
+                    <p>How does an automatic door know when to open? What sensors does it use? Are there times when the door should open, but does not? Conversely, are there times when the door opens too early or when it does not need to? How would you improve an automatic door? Now prototype and test your solution.</p>
+                    <p>How can a simple sensor like an accelerometer quantify and differentiate different styles of dance? Try to predict which placements of the phone on your body will provide the most useful data and draw your hypothesis for how x, y, and z acceleration values change over time. Now test and compare. How might other sensors provide more insight into your dance moves?</p>
+                    <p>Over the last twenty years or so, Artificial Intelligence (AI) has evolved from symbolic AI, where humans provide a computer with a set of rules to complete a task, to neural networks (machine learning) where computers learn to recognize patterns and continually adjust as they are fed new data. Brainstorm a tool that evaluates the quality of a dance performance from film footage using each AI approach. What rules might you need to include using symbolic AI? What types of data should you feed a machine learning algorithm and how might you evaluate its success? What are the limitations of each approach?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-secondary" id="accelerometer">
         <div class="container small">
             <div class="row">
                 <div class="col col-lg-6">

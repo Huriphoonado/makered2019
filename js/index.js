@@ -13,6 +13,32 @@ let samplingRate = 20;
 
 // ---------------- On Load ----------------
 document.addEventListener('DOMContentLoaded', updatePlot, false);
+document.addEventListener('DOMContentLoaded', function() {
+    let menuToggle = document.getElementById("mob-toggle");
+    let mobMenu = document.getElementById("mob-menu");
+    let body = document.getElementsByTagName("BODY")[0];
+    menuToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        mobMenu.style.display = '';
+    });
+
+    body.addEventListener('click', function() {
+        mobMenu.style.display = 'none';
+    });
+});
+
+/*
+$('.mobile-menu-toggle').on('click', function(e) {
+    e.preventDefault()
+    e.stopPropagation()
+    $('.mobile-menu').show()
+})
+
+$('body').on('click', function() {
+    $('.mobile-menu').hide()
+})
+*/
 
 // ---------------- Functions ----------------
 function handleUserInput() {
