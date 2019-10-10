@@ -10,10 +10,12 @@ let yAccel = [];
 let zAccel = [];
 
 let samplingRate = 20;
+let sampleData = '';
 
 // ---------------- On Load ----------------
-document.addEventListener('DOMContentLoaded', updatePlot, false);
+//document.addEventListener('DOMContentLoaded', updatePlot, false);
 document.addEventListener('DOMContentLoaded', function() {
+    // Set up the mobile menu toggles
     let menuToggle = document.getElementById("mob-toggle");
     let mobMenu = document.getElementById("mob-menu");
     let body = document.getElementsByTagName("BODY")[0];
@@ -26,23 +28,19 @@ document.addEventListener('DOMContentLoaded', function() {
     body.addEventListener('click', function() {
         mobMenu.style.display = 'none';
     });
+
+    // load the plot
+    updatePlot();
+
+    // Set up use with sample data
+    fetch('data/willie.json')
+    .then(response => response.text())
+    .then(text => sampleData = text);
 });
-
-/*
-$('.mobile-menu-toggle').on('click', function(e) {
-    e.preventDefault()
-    e.stopPropagation()
-    $('.mobile-menu').show()
-})
-
-$('body').on('click', function() {
-    $('.mobile-menu').hide()
-})
-*/
 
 // ---------------- Functions ----------------
 function handleUserInput() {
-    let userInput = event.target.value;
+    let userInput = document.getElementById("jsonInput").value;
     let parsedInput;
 
     try {
@@ -81,7 +79,6 @@ function handleSampleRateInput() {
         updatePlot();
         return true;
     }
-
 
 }
 
@@ -131,6 +128,16 @@ function updatePlot() {
     let data = [xTrace, yTrace, zTrace];
 
     Plotly.newPlot(plotLoc, data, layout, {responsive: true});
+}
+
+function useSampleData() {
+    console.log(sampleData);
+    let jsonInput = document.getElementById("jsonInput");
+    jsonInput.value = sampleData;
+
+    handleUserInput();
+
+    return false;
 }
 
 function feedbackAfterInput(caseNum) {

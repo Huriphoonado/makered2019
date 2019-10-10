@@ -21,6 +21,7 @@
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="js/index.js"></script>
 
+    <a href="https://github.com/ampedresearch" target="_blank" class="github-corner" aria-label="View source on GitHub"><svg width="60" height="60" viewBox="0 0 250 250" style="fill:#fff; color:#151513; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
     <nav>
         <div class="nav-container">
             <div class="nav-logo">
@@ -28,50 +29,160 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#activities">Activites</a></li>
                 <li><a href="#accelerometer">Accelerometor</a></li>
-                <li><a href="#accelerometer">Forro</a></li>
-                <li><a href="#accelerometer">Kinect</a></li>
             </ul>
             <a class="mobile-menu-toggle" id="mob-toggle"></a>
             <ul class="menu mobile-menu" id="mob-menu" style="display: none; position: absolute; top: 15px; right: 30px; z-index: 10;">
                 <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#activities">Activites</a></li>
                 <li><a href="#accelerometer">Accelerometor</a></li>
-                <li><a href="#accelerometer">Forro</a></li>
-                <li><a href="#accelerometer">Kinect</a></li>
             </ul>
         </div>
     </nav>
-    <section class="section-primary" id="introduction">
+
+    <header style="height: 761px;">
+        <img src="img/Amped_Logo.png" alt="AMPED Research Logo" style="height: 256px">
+        <h2 class="subtitle">materials and resources from our workshop</h2>
+        <p><a href="https://makered.org/convening-2019/" target="_blank">FIFTH ANNUAL MAKER ED CONVENING</a></p>
+        <a class="scroll-down" href="#introduction"></a>
+    </header>
+
+    <section class="section-secondary" id="introduction">
         <div class="container small">
             <div class="row">
                 <div class="col">
                     <h1>Introduction to Motion Capture Technologies</h1>
-
-                    <h3>What is Motion Capture?</h3>
-                    <p>Motion capture is the process of capturing the movement of people or objects. It is used for film animation, sports analysis, military science, medicine, and robotics. Motion capture operates by capturing the coordinate position of points in the body or object moving, either through sensors placed on the body or using computer vision to identify the points in the body after a video is filmed. There are a wide variety of motion capture technologies in the market today, ranging significantly in both the rate and fidelity of capture and pose.</p>
-                    <p>The educational opportunities associated with motion capture technology are vast and diverse. For example, motion capture is closely related to the quantified self movement, empowering students with the opportunity to collect and analyze data about their own movement. More broadly, motion capture presents a valuable opportunity to engage students in learning about data science and computer science through project-based experiences that can be interest-driven, embodied and collaborative. In exploring the relationship between physical motion, and visualization of that motion, students have the opportunity to “open the black box” and witness the structuring and reduction of data and the process of analogical mapping between real objects and symbols.</p>
-                    <p>Motion capture can be easily integrated into geometry and physics classes, computer science and design workshops and making activities that invite students to build their own tools, algorithms or visualizations. They can also be combined with extracurricular programs, such as dance and physical education.</p>
-
-                    <h3>What motion capture technologies are available?</h3>
-                    <p>Mobile Phone Accelerometer (Free): Simple applications have been designed to easily access data from a mobile phone’s accelerometer. They produce files with the X,Y,Z values of the acceleration of the phone at set intervals.</p>
-                    <p>OpenPose Software (Free):an open-source human pose estimation software that uses computer vision to identify the X,Y positions of specific points in the body at set intervals from any video upload (even one filmed with an iPhone!)</p>
-                    <p>Wekinator (Free): A free open-source app for the creation of systems for gesture analysis and feedback. The Wekinator uses machine learning in which the user demonstrates example gestures through their webcam updating and improving their model in real time and requires no coding. Example applications include movement based instruments and gesture based game controllers.</p>
-                    <p>Kinect Sensor: Microsoft Kinect sensor/camera that captures X,Y,Z (it is able to capture depth) positions of points in the body and automatically displays visualizations of them on the screen.</p>
-
-                    <h3>For Students - Motion Capture Starter Questions:</h3>
-                    <p>In day-to-day life, list all examples of motion capture technology that you can think of. How well do these technologies tend to work? Are these technologies always useful? Do they ever make you feel uncomfortable?</p>
-                    <p>How does an automatic door know when to open? What sensors does it use? Are there times when the door should open, but does not? Conversely, are there times when the door opens too early or when it does not need to? How would you improve an automatic door? Now prototype and test your solution.</p>
-                    <p>How can a simple sensor like an accelerometer quantify and differentiate different styles of dance? Try to predict which placements of the phone on your body will provide the most useful data and draw your hypothesis for how x, y, and z acceleration values change over time. Now test and compare. How might other sensors provide more insight into your dance moves?</p>
-                    <p>Over the last twenty years or so, Artificial Intelligence (AI) has evolved from symbolic AI, where humans provide a computer with a set of rules to complete a task, to neural networks (machine learning) where computers learn to recognize patterns and continually adjust as they are fed new data. Brainstorm a tool that evaluates the quality of a dance performance from film footage using each AI approach. What rules might you need to include using symbolic AI? What types of data should you feed a machine learning algorithm and how might you evaluate its success? What are the limitations of each approach?</p>
                 </div>
             </div>
         </div>
     </section>
-    <section class="section-secondary" id="accelerometer">
+    <section class="section-secondary" id="introduction">
+        <div class="container small">
+            <div class="row">
+                <div class="col">
+                    <h3>What is Motion Capture?</h3>
+                    <p class="magnify">Motion capture is the process of capturing the movement of people or objects. It is used for film animation, sports analysis, military science, medicine, and robotics. Motion capture operates by capturing the coordinate position of points in the body or object moving, either through sensors placed on the body or using computer vision to identify the points in the body after a video is filmed. There are a wide variety of motion capture technologies in the market today, ranging significantly in both the rate and fidelity of capture and pose.</p>
+                    <p class="magnify">The educational opportunities associated with motion capture technology are vast and diverse. For example, motion capture is closely related to the quantified self movement, empowering students with the opportunity to collect and analyze data about their own movement. More broadly, motion capture presents a valuable opportunity to engage students in learning about data science and computer science through project-based experiences that can be interest-driven, embodied and collaborative. In exploring the relationship between physical motion, and visualization of that motion, students have the opportunity to “open the black box” and witness the structuring and reduction of data and the process of analogical mapping between real objects and symbols.</p>
+                    <p class="magnify">Motion capture can be easily integrated into geometry and physics classes, computer science and design workshops and making activities that invite students to build their own tools, algorithms or visualizations. They can also be combined with extracurricular programs, such as dance and physical education.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-secondary">
+        <div class="container small">
+            <div class="row">
+                <div class="col">
+                    <h3>What are some available motion capture technologies?</h3>
+                </div>
+                <div class="col col-md-6">
+                    <div class="card">
+                        <h3 class="card-title">Mobile Phone Accelerometer</h3>
+                        Simple applications have been designed to easily access data from a mobile phone’s accelerometer. They produce files with the X,Y,Z values of the acceleration of the phone at set intervals.
+                        <ul class="card-actions">
+                            <li><button onclick="window.open('https://apps.apple.com/us/app/accelerometer/id499629589');" class="button-primary-outlined">FREE IPHONE EXAMPLE</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col col-md-6">
+                    <div class="card">
+                        <h3 class="card-title">OpenPose</h3>
+                        An open-source human pose estimation software that uses computer vision to identify the X,Y positions of specific points in the body at set intervals from any video upload (even one filmed with an iPhone!)
+                        <ul class="card-actions">
+                            <li><button onclick="window.open('https://github.com/CMU-Perceptual-Computing-Lab/openpose');" class="button-primary-outlined">OPEN SOURCE AND FREE</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col col-md-6">
+                    <div class="card">
+                        <h3 class="card-title">Wekinator</h3>
+                        Machine learning environment for the creation of systems for gesture analysis and feedback. Simply film gestures through your webcam and train a machine learning algorithm.
+                        <ul class="card-actions">
+                            <li><button onclick="window.open('http://www.wekinator.org');" class="button-primary-outlined">OPEN SOURCE AND FREE</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col col-md-6">
+                    <div class="card">
+                        <h3 class="card-title">Kinect Sensor</h3>
+                        Sensor/camera that captures X,Y,Z (it is able to capture depth) positions of points in the body and automatically displays visualizations of them on the screen.
+                        <ul class="card-actions">
+                            <li><button onclick="window.open('https://azure.microsoft.com/en-us/services/kinect-dk/');" class="button-primary-outlined">$399, Microsoft</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-secondary">
+        <div class="container small">
+            <div class="row">
+                <div class="col">
+                    <h3>What are starting questions for students to explore?</h3>
+                    <div class="stepper">
+                        <div class="step">
+                            <p class="step-number">1</p>
+                            <p class="step-title">Everyday Motion Capture</p>
+                            <p>In day-to-day life, list all examples of motion capture technology that you can think of. How well do these technologies tend to work? Are these technologies always useful? Do they ever make you feel uncomfortable?</p>
+                        </div>
+                        <div class="step">
+                            <p class="step-number">2</p>
+                            <p class="step-title">Doors</p>
+                            <p>How does an automatic door know when to open? What sensors does it use? Are there times when the door should open, but does not? Conversely, are there times when the door opens too early or when it does not need to? How would you improve an automatic door? Now prototype and test your solution.</p>
+                        </div>
+                        <div class="step">
+                            <p class="step-number">3</p>
+                            <p class="step-title">Sensors and Dance</p>
+                            <p>How can a simple sensor like an accelerometer quantify and differentiate different styles of dance? Try to predict which placements of the phone on your body will provide the most useful data and draw your hypothesis for how x, y, and z acceleration values change over time. Now test and compare. How might other sensors provide more insight into your dance moves?</p>
+                        </div>
+                        <div class="step">
+                            <p class="step-number">4</p>
+                            <p class="step-title">How about Machine Learning?</p>
+                            <p>Over the last twenty years or so, Artificial Intelligence (AI) has evolved from symbolic AI, where humans provide a computer with a set of rules to complete a task, to neural networks (machine learning) where computers learn to recognize patterns and continually adjust as they are fed new data. Brainstorm a tool that evaluates the quality of a dance performance from film footage using each AI approach. What rules might you need to include using symbolic AI? What types of data should you feed a machine learning algorithm and how might you evaluate its success? What are the limitations of each approach?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-primary" id="activities">
+        <div class ="container small">
+            <div class="row">
+                <div class="col"><h1>Activities</h1></div>
+            </div>
+        </div>
+    </section>
+    <section class="section-primary">
+        <div class ="container small">
+            <div class="row">
+                <div class="col col-md-5 align-center">
+                    <h3>Kinect Pose Detection</h3>
+                    <h6>How can we teach a computer to detect the movement and position of our body?</h6>
+                    <p>This lesson provides students with an opportunity to engage with motion capture sensors to explore how motion capture works and how we can train computers to evaluate our motion and body positioning. Students will draw connections between real-world bodily poses and the data captured by the Kinect sensor. The lesson also allows students to understand the process of communicating with computers through algorithms and to design their own pose detection algorithms.</p>
+                    <button onclick="window.open('https://docs.google.com/document/d/1rOa3XXr4dBkJ8IykeQrc-FmjSF6Y31oTJuM1BDthFQ0/edit?usp=sharing');" class="button-primary">Full Activity</button>
+                </div>
+                <div class="col col-md-5 col-md-offset-2 align-center">
+                    <h3>Forro Trainer</h3>
+                    <h6>How might our phones help us become better dancers?</h6>
+                    <p>This lesson provides students with an opportunity to engage with the data literacy cycle beginning with asking a question, collecting and analyzing data (through swing dancing!), and argumenting with or drawing conclusions from the data. Students will reflect on the process of data aggregation and reduction, consider the benefits of data visualization make meaning from their data.</p>
+                    <button onclick="window.open('https://docs.google.com/document/d/1UKaUpQVLv6tCef4K1lOPsTI5INZPKDw5wxva3QT5oQU/edit?usp=sharing');" class="button-primary">Full Activity</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-md-6 col-md-offset-3 align-center">
+                    <h3>Accelerometer</h3>
+                    <h6>Diving deeper, what precisly can a phone accelerometer tell us about our movement?</h6>
+                    <p>This lesson takes one step beyond the Forro Trainer lesson in unpacking the black box of how phone sensors convert our data into motion and how humans derive meaning through data through representing it visually and seeking patterns. It uses the data visualization tools in the section below.</p>
+                    <button onclick="window.open('https://docs.google.com/document/d/1ucW4-0wp6zqwpTKA3opV-GbpOvykeBUmP0LAqJ_lV0Y/edit?usp=sharing');" class="button-primary">Full Activity</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-tertiary" id="accelerometer">
         <div class="container small">
             <div class="row">
                 <div class="col col-lg-6">
-                    <h2>Accelerometor Activity</h2>
+                    <h2>Plot and Visualize Your Accelerometer Data</h2>
                 </div>
             </div>
             <div class="row">
@@ -81,13 +192,11 @@
                             <p class="step-number">1</p>
                             <p class="step-title">Download</p>
                             <p>Download an accelerometor app to your phone that supports JSON export. <a target="_blank" href="https://apps.apple.com/us/app/accelerometer/id499629589">We use this free one found in the App Store.</a></p>
-
                         </div>
                         <div class="step">
                             <p class="step-number">2</p>
                             <p class="step-title">Move</p>
                             <p>Ensure the accelerometer is tracking data and record your motions. Short recordings less then ten seconds work best.</p>
-
                         </div>
                         <div class="step">
                             <p class="step-number">3</p>
@@ -100,6 +209,7 @@
                             <p>Open your email, then copy and paste your data to the text area on the right. Scroll down to view valid data as a plot.</p>
                         </div>
                     </div>
+                    <button onclick="useSampleData()" class="button-primary-outlined button-large">OR, USE OUR DATA</button>
                 </div>
                 <div class="col col-lg-6">
                     <div class="form-control">
@@ -122,6 +232,7 @@
         </div>
     </section>
 
+
     <footer>
         <div class="container">
             <div class="row">
@@ -136,8 +247,9 @@
                     <ul class="footer-links">
                         <li><a target="_blank" href="https://docs.google.com/document/d/1snnad00mxMa2xDZ5jmcwaj6gJL8b4eTntm893JjA7j4/edit?usp=sharing">Motion Capture Overview</a></li>
                         <li><a target="_blank" href="https://drive.google.com/file/d/1h4H2G39SAmqdcjJAoYQLHuiyIN5uuArm/view?usp=sharing">Slide Deck</a></li>
-                        <li><a target="_blank" href="https://docs.google.com/document/d/1ucW4-0wp6zqwpTKA3opV-GbpOvykeBUmP0LAqJ_lV0Y/edit?usp=sharing">Acceleromerator Activity</a></li>
                         <li><a target="_blank" href="https://docs.google.com/document/d/1rOa3XXr4dBkJ8IykeQrc-FmjSF6Y31oTJuM1BDthFQ0/edit?usp=sharing">Kinect Activity</a></li>
+                        <li><a target="_blank" href="https://docs.google.com/document/d/1UKaUpQVLv6tCef4K1lOPsTI5INZPKDw5wxva3QT5oQU/edit?usp=sharing">Forro Activity</a></li>
+                        <li><a target="_blank" href="https://docs.google.com/document/d/1ucW4-0wp6zqwpTKA3opV-GbpOvykeBUmP0LAqJ_lV0Y/edit?usp=sharing">Acceleromerator Activity</a></li>
                     </ul>
                 </div>
 
